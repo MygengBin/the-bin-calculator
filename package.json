@@ -1,0 +1,19 @@
+{
+  "name": "the-bin-calculator",
+  "version": "1.0.0",
+  "description": "耿彬的日历插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo '耿彬的日历插件test scripts 测试'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "zanshu"
+  },
+  "keywords": [
+    "the-bin-calculator"
+  ],
+  "author": "耿彬",
+  "license": "ISC",
+  "dependencies": {}
+}

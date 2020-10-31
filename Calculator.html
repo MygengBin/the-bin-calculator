@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="myThe1">
+        <table class="the-bin-calculator">
+            <thead class="the-bin-calculator-thead"></thead>
+            <tbody class="the-bin-calculator-tbody"></tbody>
+            <tfoot class="the-bin-calculator-tfoot"></tfoot>
+        </table>
+    </div>
+    <div id="myThe2">
+        <table class="the-bin-calculator">
+            <thead class="the-bin-calculator-thead"></thead>
+            <tbody class="the-bin-calculator-tbody"></tbody>
+            <tfoot class="the-bin-calculator-tfoot"></tfoot>
+        </table>
+    </div>
+    <script type="module">
+        import TheBinCalculator from './src/theBinCalculator';
+        onload=()=> {
+            new TheBinCalculator({
+                el:document.getElementById('myThe1')
+            });
+            new TheBinCalculator({
+                el:document.getElementById('myThe2')
+            });
+        }
+    </script>
+</body>
+</html>
