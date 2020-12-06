@@ -13,18 +13,25 @@
             <tfoot class="the-bin-calculator-tfoot"></tfoot>
         </table>
     </div>
-    <div id="myThe2">
-        <table class="the-bin-calculator">
-            <thead class="the-bin-calculator-thead"></thead>
-            <tbody class="the-bin-calculator-tbody"></tbody>
-            <tfoot class="the-bin-calculator-tfoot"></tfoot>
-        </table>
+    <div>
+        <div id="myThe2">
+            <table class="the-bin-calculator">
+                <thead class="the-bin-calculator-thead"></thead>
+                <tbody class="the-bin-calculator-tbody"></tbody>
+                <tfoot class="the-bin-calculator-tfoot"></tfoot>
+            </table>
+        </div>
     </div>
     <script type="module">
-        import TheBinCalculator from './src/theBinCalculator';
+        import TheBinCalculator from './src/theBinCalculator.js';
         onload=()=> {
             new TheBinCalculator({
-                el:document.getElementById('myThe1')
+                el:document.getElementById('myThe1'),
+                tfootButton:function (e) {
+                    //按钮点击事件
+                    console.log(e);
+                    return 1;
+                }
             });
             new TheBinCalculator({
                 el:document.getElementById('myThe2')

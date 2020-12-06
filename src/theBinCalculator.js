@@ -22,7 +22,6 @@ export default class {
     constructor(object) {
         /*在页面显示年份和月份*/
         arr = SumDayArray(confirmNowData.getFullYear(),confirmNowData.getMonth(),arr);
-        // console.log(object.el);
         let theBinCalculator = object.el.firstElementChild;
         // console.log(theBinCalculator.children);
         if(theBinCalculator.className==='the-bin-calculator'){
@@ -77,7 +76,19 @@ export default class {
                     case 'the-bin-calculator-tfoot':
                         /* 所以tfoot加载今天按钮*/
                         child.innerHTML='';
-                        child.innerHTML=`<tr><td colspan="7"><button onclick="console.log(new Date().toLocaleDateString());">今天</button></td></tr>`;
+                        child.innerHTML=`<tr><td colspan="7"><button class="the-bin-calculator-foot-today-button">今天</button></td></tr>`;
+                        if(object.tfootButton){
+                            child.querySelectorAll('.the-bin-calculator-foot-today-button').forEach(item=>{
+                                item.addEventListener('click',function () {
+                                    object.tfootButton({
+                                        newDate:new Date().toLocaleDateString()
+                                    })
+                                })
+                            });
+                        }
+
+
+
                         break;
                 }
             }
