@@ -1,6 +1,6 @@
 {
   "name": "the-bin-calculator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "耿彬的日历插件",
   "main": "index.js",
   "scripts": {
